@@ -1,0 +1,328 @@
+/* customizable snowflake styling */
+/* CSS normal untuk layar desktop */
+.loader button {
+    width: 50%;
+    height: 100px;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    background: center no-repeat #fff;
+    z-index: 9999999999999999999999;
+    font-size: 50px;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .8em;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(120, 50, 5);
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+    animation: pulse 1.5s infinite;
+}
+
+/* Media query untuk perangkat dengan lebar layar maksimal 768px (tablet & mobile) */
+@media screen and (max-width: 768px) {
+    .loader button {
+        width: 70%;
+        height: 80px;
+        font-size: 30px;
+    }
+}
+
+/* Media query untuk perangkat dengan lebar layar maksimal 480px (mobile) */
+@media screen and (max-width: 480px) {
+    .loader button {
+        width: 80%;
+        height: 60px;
+        font-size: 22px;
+        border-radius: 0.6em;
+    }
+}
+
+/* Media query untuk perangkat dengan lebar layar sangat kecil */
+@media screen and (max-width: 320px) {
+    .loader button {
+        width: 90%;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+.golden-btn:focus,
+.golden-btn:hover {
+    background-size: 150% 150%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    border: 1px solid rgba(165, 93, 7, .6);
+    color: rgba(120, 50, 5, .8);
+}
+
+.golden-btn:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px #b17d10,
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: linear-gradient(to bottom, #ffffff 0%, #f7f7f7 40%, #ededed 100%);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.05);
+}
+
+.song {
+    display: none;
+}
+
+body {
+    background: linear-gradient(120deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+img {
+    width: 100%;
+}
+
+.balloon-border {
+    position: fixed;
+    top: 100%;
+    opacity: 0.5;
+    z-index: 99999999;
+}
+
+/* Improved area class */
+.area {
+    text-align: center;
+    font-size: 70px;
+    color: #C4515C;
+    letter-spacing: -5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: glow 2s ease-out infinite;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 15px #ff0080, 0px 0px 20px #ff0080;
+    position: relative;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+.area::after {
+    content: '★';
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    color: #ff80bf;
+    text-shadow: 0 0 10px #fff;
+    animation: starTwinkle 1.5s infinite ease-in-out alternate;
+}
+
+#nae {
+    text-transform: capitalize;
+}
+
+#confetti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    25% {
+        transform: rotateZ(10deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    75% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+.type-wrap {
+    font-size: 25px;
+    color: #C4515C;
+
+}
+
+.cake {
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    padding-top: 400px; /* Meningkatkan padding-top agar lebih ke bawah di desktop */
+}
+
+/* Media query untuk tablet */
+@media screen and (max-width: 992px) {
+    .cake {
+        padding-top: 450px; /* Sedikit lebih ke bawah untuk tablet */
+    }
+}
+
+/* Media query untuk mobile besar */
+@media screen and (max-width: 768px) {
+    .cake {
+        position: relative;
+        transform: none;
+        left: auto;
+        padding-top: 250px; /* Dikurangi untuk mobile agar tidak terlalu ke bawah */
+        margin-bottom: 60px; /* Tambahkan margin-bottom untuk jarak dari bawah */
+    }
+    
+    .cake img {
+        max-width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Media query untuk mobile kecil */
+@media screen and (max-width: 480px) {
+    .cake {
+        padding-top: 180px;
+        margin-bottom: 80px; /* Lebih banyak margin-bottom di perangkat kecil */
+    }
+    
+    .cake img {
+        max-width: 80%; /* Gambar kue lebih kecil di perangkat kecil */
+    }
+}
+
+/* Media queries untuk responsive design */
+@media screen and (max-width: 768px) {
+    /* Untuk nama */
+    .area {
+        font-size: 50px;
+        letter-spacing: -4px;
+    }
+    
+    /* Untuk pesan typed */
+    .type-wrap {
+        font-size: 22px;
+        padding: 5px 15px;
+    }
+    
+    /* Untuk konfetti canvas */
+    #confetti {
+        height: 100%;
+    }
+    
+    
+    /* Untuk container utama */
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Media query untuk perangkat sangat kecil */
+@media screen and (max-width: 480px) {
+    .area {
+        font-size: 40px;
+        letter-spacing: -3px;
+    }
+    
+    .type-wrap {
+        font-size: 18px;
+    }
+    
+    /* Membuat balloon border lebih kecil */
+    .balloon-border {
+        width: 120%;
+        left: -10%;
+    }
+}
+
+.name-container {
+    position: relative;
+    padding: 20px 0;
+    margin: 10px auto 30px;
+    max-width: 90%;
+}
+
+.name-container::before,
+.name-container::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 60%;
+    background: linear-gradient(90deg, transparent, #C4515C, transparent);
+    left: 20%;
+}
+
+.name-container::before {
+    top: 0;
+}
+
+.name-container::after {
+    bottom: 0;
+}
+
+.name-decoration {
+    font-size: 18px;
+    color: #C4515C;
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+@keyframes starTwinkle {
+    from {
+        opacity: 0.5;
+        transform: scale(0.8) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .area {
+        font-size: 50px;
+    }
+    
+    .name-decoration {
+        font-size: 16px;
+    }
+    
+    .name-container::before,
+    .name-container::after {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .area {
+        font-size: 40px;
+        letter-spacing: -3px;
+    }
+    
+    .name-decoration {
+        font-size: 14px;
+    }
+}
